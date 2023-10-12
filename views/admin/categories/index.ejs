@@ -23,7 +23,10 @@
                     <th class="align-middle"><%= category.slug %></th>
                     <th class="align-middle text-center">
                         <button class="btn btn-warning">Editar</button>
-                        <button class="btn btn-danger">Deletar</button>
+                        <form method="POST" action="/categories/delete" style="display: inline;">
+                            <input type="hidden" name="id" value="<%= category.id %>">
+                            <button class="btn btn-danger">Deletar</button>
+                        </form>
                     </th>
                 </tr>
             <% }) %> 
